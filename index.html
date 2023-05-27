@@ -1,36 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Simple Site with Text Overlay</title>
+    <title>Simple Site</title>
     <style>
-        .container {
-            position: relative;
-            text-align: center;
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .image-container {
+            flex: 1;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .image {
             max-width: 100%;
-            height: auto;
+            max-height: 100%;
+            object-fit: contain;
         }
-        .overlay-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        .upper-text,
+        .bottom-text {
+            background-color: rgba(0, 0, 0, 0.7);
             color: white;
             font-size: 24px;
             font-weight: bold;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            z-index: 1;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <img class="image" src="IMG-20230525-215531.jpg" alt="Full Size Image">
-        <div class="overlay-text">
-            <h2>k herya ?</h2>
-            <p>Padna ja muji</p>
-        </div>
+    <div class="upper-text">
+        <h2>k herya ?</h2>
+    </div>
+    <div class="image-container">
+        <img class="image" src="IMG-20230525-215531.jpg" alt="Image">
+    </div>
+    <div class="bottom-text">
+        <h2>Padna ja muji</h2>
     </div>
 </body>
 </html>
