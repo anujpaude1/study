@@ -5,7 +5,7 @@ import { useState } from 'react'
 
 export default function Home() {
 
-  const [pass, setPass] = useState("mujiii");
+  const [pass, setPass] = useState("");
   const [data, SetData] = useState([]);
 
   return (
