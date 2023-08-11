@@ -40,8 +40,8 @@ export default function Home() {
             <div>ENTER PASSWORD</div>
             <input type='name' className='bg-gray-300 text-[#006a4e] rounded-xl w-60 h-10' onChange={(e) => setPass(e.target.value)} ></input>
 
-          </div>}
-
+          </div>
+          }
 
 
       </div>
