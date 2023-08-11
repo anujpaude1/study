@@ -4,7 +4,7 @@ const page = () => {
   return (
     <div>
         
-LIJAN MUJIIIIIIIIIIIIIIIIII
+This is a family friendly Message for all. <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">CLICK HERE FOR EM NOTES!!!</a>
 
     </div>
   )
