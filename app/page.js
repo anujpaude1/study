@@ -1,19 +1,37 @@
 "use client"
 import Image from 'next/image'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 
 export default function Home() {
 
   const [pass, setPass] = useState("");
   const [data, SetData] = useState([]);
+  const [show,setShow] = useState(false);
+
+  useEffect(()=>{
+
+    if(pass=="mujiii"){
+
+      setTimeout(()=>{
+      
+        setShow(true);
+        console.log("KIRTAN")
+
+      },400)
+
+      
+    }
+    
+
+  },[pass])
 
   return (
-    <div class="bg-white h-screen text-blue-600 flex flex-col items-center">
+    <div class=" h-screen flex flex-col items-center">
       {/* <Image alt="Image"> */}
 
       <div className='flex flex-col items-center pt-20'>
-        {pass == "mujiii" ?
+        {show ?
 
           <div className='flex flex-col items-center gap-9'>
 
@@ -35,10 +53,10 @@ export default function Home() {
 
           </div>
           :
-          <div className='flex flex-col items-center'>
+          <div className={` ${pass=="mujiii" && "opacity-0 ease-in-out duration-300"} flex flex-col items-center `}>
 
             <div>ENTER PASSWORD</div>
-            <input type='name' className='bg-gray-300 text-[#006a4e] rounded-xl w-60 h-10' onChange={(e) => setPass(e.target.value)} ></input>
+            <input type='name' className= {` bg-transparent border-x-4 border-r-gray-50 text-white rounded-xl w-60 h-10 `} onChange={(e) => setPass(e.target.value)} ></input>
 
           </div>}
 
