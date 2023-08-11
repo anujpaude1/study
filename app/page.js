@@ -18,7 +18,7 @@ export default function Home() {
         setShow(true);
         console.log("KIRTAN")
 
-      },400)
+      },3000)
 
       
     }
@@ -53,7 +53,7 @@ export default function Home() {
 
           </div>
           :
-          <div className={` ${pass=="mujiii" && "opacity-0 ease-in-out duration-300"} flex flex-col items-center `}>
+          <div className={` ${pass=="mujiii" && "opacity-0 ease-in-out duration-[3000ms]"} flex flex-col items-center `}>
 
             <div>ENTER PASSWORD</div>
             <input type='name' className= {` bg-transparent border-x-4 border-r-gray-50 text-white rounded-xl w-60 h-10 `} onChange={(e) => setPass(e.target.value)} ></input>
