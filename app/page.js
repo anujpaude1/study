@@ -58,8 +58,8 @@ export default function Home() {
             <div>ENTER PASSWORD</div>
             <input type='name' className= {` bg-transparent border-x-4 border-r-gray-50 text-white rounded-xl w-60 h-10 `} onChange={(e) => setPass(e.target.value)} ></input>
 
-          </div>}
-
+          </div>
+          }
 
 
       </div>
