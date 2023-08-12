@@ -6,7 +6,7 @@ import Enter from './Enter';
 
 export default function Home() {
   const delay = 1000;
-  const [pass, setPass] = useState("mujiii");
+  const [pass, setPass] = useState();
   const [data, SetData] = useState([
     {"id":"2",
     "user" : "kirtan",
