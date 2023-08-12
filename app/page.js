@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 
 export default function Home() {
 
+  const [delay,] = useState(1000);
   const [pass, setPass] = useState("");
   const [data, SetData] = useState([
     {"id":"2","user" : "kirtan",
@@ -23,7 +24,7 @@ export default function Home() {
         // console.log("KIRTAN")
         setPass("")
 
-      },3000)
+      },delay)
 
       
     }
@@ -62,7 +63,7 @@ export default function Home() {
         <button className='bg-red-600 hover:bg-red-500 w-20  rounded-md h-10' onClick={()=>setShow(false)} >back</button>
           </div>
           :
-          <div  className={` ${pass=="mujiii" && "opacity-0 ease-in-out duration-[3000ms]"} flex flex-col items-center `}>
+          <div  className={` ${pass=="mujiii" && `opacity-0 ease-in-out duration-[1000ms]`} flex flex-col items-center `}>
 
             <div className="text-black font-bold">ENTER PASSWORD</div>
             <input type='name' disabled={pass == "mujiii" ? true : false} 
