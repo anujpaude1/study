@@ -39,7 +39,7 @@ export default function Home() {
 
           <div className='flex flex-col items-center'>
 
-            <div>
+            <div className="text-black font-bold">
               <label>Enter Data You Want To Add : </label>
               <textarea className='bg-gray-300 text-[#006a4e] rounded-xl w-96 h-36' />
             </div>
@@ -55,13 +55,16 @@ export default function Home() {
               ))
             }
 
-        <button className='hover:bg-red-600 w-20  rounded-md h-10' onClick={()=>setShow(false)} >back</button>
+        <button className='bg-red-600 hover:bg-red-500 w-20  rounded-md h-10' onClick={()=>setShow(false)} >back</button>
           </div>
           :
           <div  className={` ${pass=="mujiii" && "opacity-0 ease-in-out duration-[3000ms]"} flex flex-col items-center `}>
 
-            <div>ENTER PASSWORD</div>
-            <input type='name' disabled={pass == "mujiii" ? true : false} className= {` bg-transparent border-x-4 border-r-gray-50 text-white rounded-xl w-60 h-10 `} onChange={(e) => setPass(e.target.value)} ></input>
+            <div className="text-black font-bold">ENTER PASSWORD</div>
+            <input type='name' disabled={pass == "mujiii" ? true : false} 
+            className= {` bg-transparent border-x-4 border-black text-black rounded-xl w-60 h-10 `} onChange={(e) => setPass(e.target.value)} >
+
+            </input>
             
 
           </div>

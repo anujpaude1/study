@@ -18,7 +18,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: url('../public/OIG.png');
+  background: url('../public/test.png');
   background-size: 100% 100% ;
   color: white;
 }
