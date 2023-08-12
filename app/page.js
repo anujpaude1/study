@@ -17,7 +17,7 @@ export default function Home() {
 
   useEffect(()=>{
 
-    if(pass=="mujiii"){
+    if(pass=="prajwalchaudhary"){
 
       setTimeout(()=>{
       
