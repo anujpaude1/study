@@ -2,7 +2,7 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div className="bg-teal-200 flex items-center justify-center h-screen text-5xl font-mono text-green-600">
+    <div className="flex items-center justify-center h-screen text-5xl font-mono text-green-600">
 
       <p>
         THIS IS A FAMILY FRIENDLY UPDATE!!!<br></br>
