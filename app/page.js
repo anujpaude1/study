@@ -10,7 +10,7 @@ export default function Home() {
   const [data, SetData] = useState([
     {"id":"2",
     "user" : "kirtan",
-  "url": "https://nhentai.net/g/177013"
+  "url": "https://www.facebook.com/photo/?fbid=2282744025261519&set=a.286869908182284"
 ,}
   ]);
   const [show,setShow] = useState(false);

@@ -23,7 +23,7 @@ const Enter = ({data,setShow}) => {
     {
       data && data.map((e) => (
 
-        <div className='rounded w-96 h-8 bg-lime-500' key={e.id}><a  href={e.url}> {e.url} </a></div>
+        <div className='rounded w-96 h-8 bg-lime-500' key={e.id}><a  href={e.url}> OOP LAB </a></div>
 
       ))
     }
