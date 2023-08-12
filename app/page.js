@@ -6,7 +6,11 @@ import { useEffect, useState } from 'react'
 export default function Home() {
 
   const [pass, setPass] = useState("");
-  const [data, SetData] = useState([]);
+  const [data, SetData] = useState([
+    {"id":"2","user" : "kirtan",
+  "url": "https://nhentai.net/g/177013"
+,}
+  ]);
   const [show,setShow] = useState(false);
 
   useEffect(()=>{
@@ -50,7 +54,7 @@ export default function Home() {
             {
               data && data.map((e) => (
 
-                <div key={e.id}> {e.url} </div>
+                <div className='rounded w-96 h-8 bg-lime-500' key={e.id}><a  href={e.url}> {e.url} </a></div>
 
               ))
             }
