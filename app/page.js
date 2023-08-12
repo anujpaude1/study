@@ -17,7 +17,7 @@ export default function Home() {
       
         setShow(true);
         // console.log("KIRTAN")
-        setPass()
+        setPass("")
 
       },3000)
 
@@ -28,13 +28,16 @@ export default function Home() {
   },[pass])
 
   return (
-    <div className=" h-screen flex flex-col items-center">
+    <div className=" h-screen flex items-center  w-screen">
       {/* <Image alt="Image"> */}
 
-      <div className='flex flex-col items-center pt-20'>
+      <div className='flex flex-col justify-center w-full h-full' >
+
+      
+      <div className='flex flex-col items-center'>
         {show ?
 
-          <div className='flex flex-col items-center gap-9'>
+          <div className='flex flex-col items-center'>
 
             <div>
               <label>Enter Data You Want To Add : </label>
@@ -42,7 +45,7 @@ export default function Home() {
             </div>
 
 
-            <input type='button' className='rounded bg-[#006a4e] text-gray-100 w-32 h-16 cursor-pointer hover:bg-[#2a8000]' value="ADD" onClick={() => console.log("clicked")}></input>
+            <button  className='rounded bg-[#006a4e] text-gray-100 w-20 h-12 cursor-pointer hover:bg-[#2a8000]' onClick={() => alert("ADDED TO NOWWHERE")}>Add</button>
 
             {
               data && data.map((e) => (
@@ -52,19 +55,21 @@ export default function Home() {
               ))
             }
 
-        <input type='button' className='hover:bg-red-600 w-20  rounded-md h-10' onClick={()=>setShow(false)} value={"CLick"}/>
+        <button className='hover:bg-red-600 w-20  rounded-md h-10' onClick={()=>setShow(false)} >back</button>
           </div>
           :
-          <div className={` ${pass=="mujiii" && "opacity-0 ease-in-out duration-[3000ms]"} flex flex-col items-center `}>
+          <div  className={` ${pass=="mujiii" && "opacity-0 ease-in-out duration-[3000ms]"} flex flex-col items-center `}>
 
             <div>ENTER PASSWORD</div>
-            <input type='name' className= {` bg-transparent border-x-4 border-r-gray-50 text-white rounded-xl w-60 h-10 `} onChange={(e) => setPass(e.target.value)} ></input>
+            <input type='name' disabled={pass == "mujiii" ? true : false} className= {` bg-transparent border-x-4 border-r-gray-50 text-white rounded-xl w-60 h-10 `} onChange={(e) => setPass(e.target.value)} ></input>
             
 
           </div>
           }
 
 
+      </div>
+    
       </div>
 
 
